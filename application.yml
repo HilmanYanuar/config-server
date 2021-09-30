@@ -1,0 +1,15 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  jackson:
+    serialization:
+      indent-output: true
+
+---
+spring:
+  profiles: heroku
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://hy-tm-2017-discovery-001.herokuapp.com/eureka/,https://hy-tm-2017-discovery-002.herokuapp.com/eureka/
